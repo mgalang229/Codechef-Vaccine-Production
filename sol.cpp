@@ -16,15 +16,10 @@ int main() {
 	int d1, d2, v1, v2, p;
 	cin >> d1 >> v1 >> d2 >> v2 >> p;
 	int tmp=0, cnt=0;
-	bool ok1=0, ok2=0;
 	for(int i=1; tmp<p; ++i) {
-		if(i==d1)
-			ok1=1;
-		if(i==d2)
-			ok2=1;
-		if(ok1)
+		if(i>=d1)
 			tmp+=v1;
-		if(ok2)
+		if(i>=d2)
 			tmp+=v2;
 		cnt++;
 	}
